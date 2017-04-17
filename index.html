@@ -3,11 +3,285 @@
 <head>
   <meta charset="UTF-8">
   <title>Little Man</title>
-
-      <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
       <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    
+<style>
+    
+html {
+ background-color:#A7BFE8;
+ height: auto;
+ width: auto;
+} 
 
+#man {
+  position: absolute;
+}
+
+.invert {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.standard {
+}
+
+body {
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+#container {
+  position: absolute;
+  background: #6190E8; /* fallback for old browsers */
+  background: linear-gradient(to left, #6190E8 , #A7BFE8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.title {
+    color: aliceblue;
+    font-size: 400%;
+    position:absolute;
+    top: 40%;
+    right: 15%;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.caption {
+    color: aliceblue;
+    font-size: 150%;
+    position:absolute;
+    top: 55%;
+    right: 23%;
+    font-family: 'Architects Daughter', cursive;
+}
+
+
+
+.icon {
+    background-image: url(location.png);
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 200px;
+    position: absolute;
+}
+
+.one {
+    top: 10%;
+    left: 10%;
+    transform: rotate(-30deg);
+    zoom:80%;
+}
+
+.two {
+    right: 10%;
+    top: 10%;
+    transform: rotate(30deg);
+    zoom:80%;
+}
+
+.three {
+    top: 5%;
+    left: 43%;
+    transform: rotate(0deg);
+    zoom:80%;
+        
+}
+
+.four {
+    right: 10%;
+    bottom: 1%;
+    transform: rotate(45deg);
+    zoom:80%
+}
+
+.five {
+    bottom: 1%;
+    left: 10%;
+    transform: rotate(-45deg);
+    zoom:80%;
+
+}
+
+.six {
+    bottom: 0%;
+    right: 43%;
+    transform: rotate(0deg);
+    zoom:80%;
+}
+
+.text {
+    position: relative;
+    color: aliceblue;
+    text-align: center;
+    line-height:150px;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.text a {
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+}
+
+.text a:hover {
+    border: 3px dashed white;
+    border-radius: 100px;
+}
+
+.modalDialog {
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 999;
+    display: none;
+
+}
+
+.modalDialog:target {
+    display: block;
+}
+
+.modalDialog .modal-box {
+    width: 50%;
+    background-color: rgba(255,255,255,0.95);
+    position: absolute;
+    top:15%;
+    left:15%;
+    padding:10%;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 120%
+}
+
+.close {
+    position: absolute;
+    top:-25px;
+    right:0;
+    font-size: 300%;
+    color: lightskyblue;
+    text-align: center;
+    width: 24px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+}
+
+.bball {
+    position: absolute;
+    zoom: 20%;
+    left: 70%;
+    top: 5%; 
+}
+
+.school {
+    position: absolute;
+    zoom:10%;
+    left:4%;
+    top: 10%; 
+    transform: rotate(-35deg)
+}
+
+.home {
+    position: absolute;
+    zoom:35%;
+    left: 8%;
+    top:10%;
+}
+
+.work {
+    position: absolute;
+    zoom:20%;
+    left:35%;
+    top: 10%
+    
+}
+
+@media only screen and (max-width: 700px) {
+    
+    html {
+        background-color:#A7BFE8;
+        background-size: contain;
+        overflow: scroll;
+        height: 100%;
+    }
+    
+    .icon {display: none;}
+    
+    .modalDialog {position: relative;
+    display: block;}
+    
+    .modalDialog .modal-box {
+        background-color: rgba (255, 255, 255, 0.95);
+        position: relative;
+        height: 100%;
+    }
+    
+    .close {display: none}
+    
+    .title {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 0 20px;
+    }
+    
+    .caption {
+        position: relative;
+        top: 10px;
+        left: 20px;
+    }
+    
+    .work {
+        zoom:10%;
+        top: 2%;
+        left: 30%;
+    }
+    
+    .home {
+        zoom: 20%;
+        top:3%;
+        left: 2%;
+    }
+    
+    .school {
+        zoom: 5%;
+        top: 4%;
+        left: 2%;
+        
+    }
+    
+    .bball {
+        zoom: 7%;
+        top: 1%;
+    }
+}
+
+    </style>
   
 </head>
 
@@ -100,11 +374,82 @@
             
             </div></div>
       
-      
-      
 </div>
   
-    <script src="js/index.js"></script>
+    <script> 
+    
+    idlepath = "http://chinykian.games-ignition.com/test/stickcharacter_idle.gif";
+runpath = "http://chinykian.games-ignition.com/test/stickcharacter.gif";
+
+// global variables
+imgOffsetX = 36; //number of pixels to center of sprite
+imgOffsetY = 72; //number of pixels to bottom of sprite
+targetPosX = 980;
+targetPosY = 280;
+posX = 980;
+posY = 280;
+
+// set initial position
+var man = document.getElementById("man");
+man.style.left = posX + "px";
+man.style.top = posY + "px";
+
+document.getElementById("container").onclick = setTargetPosition;
+setInterval(moveToTarget, 0.03);
+
+function getDistanceBetween(x1, y1, x2, y2)
+{
+  var dx = x1-x2;
+  var dy = y1-y2;
+  return Math.sqrt(dx*dx + dy*dy);
+}
+
+function moveToTarget()
+{
+  var man = document.getElementById("man");
+  
+  var distBetw = getDistanceBetween(targetPosX, targetPosY, posX, posY);
+  if (distBetw < 10) //reached target
+  {
+    if (idlepath != man.src)
+      man.src = idlepath;
+    return;
+  }
+  else //keep moving
+  {
+    if (runpath != man.src)
+      man.src = runpath;
+    
+    var dx = (targetPosX - posX) / distBetw;
+    var dy = (targetPosY - posY) / distBetw;
+    posX += dx;
+    posY += dy;
+    
+    man.style.left = posX + "px";
+    man.style.top = posY + "px";
+  }
+}
+
+function setTargetPosition()
+{
+  targetPosX = event.clientX - imgOffsetX;
+  targetPosY = event.clientY - imgOffsetY;
+  
+  var man = document.getElementById("man");
+  if (targetPosX < posX)
+  {
+    man.className = "invert";
+  }
+  else
+  {
+    man.className = "standard";
+  }
+}
+    
+    
+    
+    </script>
 
 </body>
 </html>
+
