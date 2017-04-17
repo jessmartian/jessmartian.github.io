@@ -1,260 +1,110 @@
-<html>
-  <head>
-       <link rel="stylesheet" href="stylesheet.css">
-       <link rel="reset" href="reset.css">
-    
-    <title> Animation Project </title>
-      <style>
-          body {
-animation: colorchange 50s ease-in-out infinite;
-} 
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Little Man</title>
 
- @keyframes colorchange
-    {
-      0%  {background:#8C0050;}
-      10% {background:#151459;}
-      20% {background:#1A2070;}
-      30% {background:#F6C06A;}
-      40% {background:#F06E53;}
-      50% {background:#FDE101;}
-      60% {background:#F58605;}
-      70% {background:#BD9B6A;}
-      80% {background:#C24B05;}
-      90% {background:#0E0E0A;}
-      100%{background:#590401;}
-    }
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+      <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-.cloud {
-   background-size: contain;
-   background-repeat: no-repeat;
-   height: 170px;
-   width: 200px;
-   position: absolute;
-}
-
-.one {
-    background-image: url(cloud.png);
-    left: 20%;
-    top: 45%;
-    position:absolute;
-    animation-name:one;
-    animation-duration:5s;
-    animation: one 5s ease-in-out infinite;
-}
-
-@keyframes one { 
-    0% {left:5%; right:25%;}
-    25% {left:25%; right:5%;}
-    50% {left:5%; right:25%;}
-    75% {left:25%; right:5%;}
-    100% {left:5%; right:25%;}
-}
-
-.two { 
-    background-image: url(cloud.png);
-    left: 60%;
-    top: 45%;
-    position:absolute;
-    animation-name:two;
-    animation-duration:5s;
-    animation: two 5s ease-in-out infinite;
-}
-
-@keyframes two { 
-    0% {left:75%; right:55%;}
-    25% {left:55%; right:75%;}
-    50% {left:75%; right:55%;}
-    75% {left:55%; right:75%;}
-    100% {left:75%; right:55%;}
-}
-
-.arc {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  margin-left: -70px;
-  width: 140px;
-  height: 70px;
-  overflow: hidden;
-}
-
-@keyframes arc {
-  0% {
-    border-width: 30px;
-  }
-  25% {
-    border-width: 15px;
-  }
-  50% {
-    -webkit-transform: rotate(27deg);
-            transform: rotate(27deg);
-    border-width: 30px;
-  }
-  75% {
-    border-width: 15px;
-  }
-  100% {
-    border-width: 30px;
-  }
-}
-
-.cube {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  width: 30px;
-  height: 30px;
-  margin-left: -15px;
-  margin-top: 0;
-}
-
-.arc-cube {
-  position: absolute;
-  bottom: -70px;
-  left: 50%;
-  margin-left: -70px;
-  width: 140px;
-  height: 140px;
-  border-style: solid;
-  border-top-color: transparent;
-  border-right-color: #670791;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  box-sizing: border-box;
-  animation: arc 2s ease-in-out infinite;
-  transform: rotate(-200deg);
-}
-
-
-.red1 {
-   background-size: contain;
-   background-repeat: no-repeat;
-   position: absolute;
-   zoom: 27%;
-   top: 17%;
-   left:32%;
-   animation: super-rainbow 15s infinite; 
-}
-
-
-
-
-.orange1 {
-   background-size: contain;
-   background-repeat: no-repeat;
-   position: absolute;
-   zoom: 27%;
-   top: 17%;
-   left:32%;
-   animation-name: wiggle;
-   animation-duration: .7s;
-   animation: wiggle 1s ease-in-out infinite;
-}
-
-@keyframes wiggle {
-    10%, 30%, 50%, 70%, 90% {left:32.5%;}
-    0%, 20%, 40%, 60%, 80%, 100% {left:32%;}
-    
-}
-
-.yellow1 {
-   background-size: contain;
-   background-repeat: no-repeat;
-   position: absolute;
-   zoom: 27%;
-   top: 17%;
-   left:32%;
-}
-
-.green1 {
-   background-size: contain;
-   background-repeat: no-repeat;
-   position: absolute;
-   zoom: 27%;
-   top: 17%;
-   left:32%;
-   animation: bounce 2s ease-in-out infinite;
-}
-
-@keyframes bounce {
-   0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-   40% {transform: translateY(90px);} 
-   60% {transform: translateY(45px);} 
-}
-
-.blue1{
-   background-size: contain;
-   background-repeat: no-repeat;
-   position: absolute;
-   zoom: 27%;
-   top: 17%;
-   left:32%;
-    
-}
-   
-.type {
-    font-size: 100px;
-    line-height: 1200%;
-    margin-left: 29%;
-    animation: type 50s ease-in-out infinite;
-    }
-
-@keyframes type {
-    0% {color:green;}
-    20% {color:orange;}
-    40% {color:blue;}
-    60% {color:yellow;}
-    80% {color:purple;}
-    100% {color:red;}
-}
-      
-      
-      </style>
-  </head>
   
-  <body> 
+</head>
+
+<body>
+  <div id="container">
+<img id="man" src="http://chinykian.games-ignition.com/test/stickcharacter_idle.gif">
+     
+      <div class="title"><div class="text"></div>A Day in the Life of W.P</div> 
+       
+     <div class="caption"><div class="text"></div>Click which location you want to travel to first!</div>
       
-   <div>
+        <div class="icon one"><div class="text"><a href="#school">School</a></div></div>
        
-       <h class="type"> Rainbow Rave </h>
-       
-      <div class="clouds">
-     <div class="cloud one"></div>
-    <div class="cloud two"></div>
+        <div class="icon two"><div class="text"><a href="#volunteer">Volunteering</a></div></div>
+        
+        <div class="icon three"><div class="text"><a href="#free">Free Time</a></div></div>
+        
+         <div class="icon four"><div class="text"><a href="#job">Work</a></div></div>
+        
+         <div class="icon five"><div class="text"><a href="#home">Home</a></div></div>
+        
+         <div class="icon six"><div class="text"><a href="#credit">credits</a></div></div>
+        
+        <div id="school" class="modalDialog"> <div class="modal-box">
+        
+            <a href="#close" class="close"><i class="ion-close-circled"></i></a>
+           
+            <h2>School Life</h2><img class="school" src="css/school.png">
+           
+            <p>W.P. relies on the 44 Kipling South bus or 188 Kipling South Rocket bus to get to Humber College Lakeshore Campus. He avoids rush hour to avoid sharing the bus with rowdy high school students from Lakeshore Collegiate Institute and Father John Redmon Catholic Secondary School. He is currently enrolled in Humber’s Human Resources Management postgraduate program and usually commutes to the nearby Cineplex Cinemas Queensway. </p>
+            
+            
+            </div></div>
+        
+        <div id="volunteer" class="modalDialog"> <div class="modal-box">
+        
+            <a href="#close" class="close"><i class="ion-close-circled"></i></a>
+           
+            <h2>Volunteer Life</h2><img class="bball" src="css/bball.png">
+           
+            <p>On Tuesday nights, W.P. travels across Toronto to coach his men’s basketball team. Although W.P. is knowledgeable about the sport, he is not athletically talented enough to make an impact on the court. Instead, he manages a group of former college and university varsity players and lives vicariously through their success. The commute is tough, because he often has to take the 101 Downsview Park bus that comes only every 20 minutes and stops running at 10 o’clock in the evening.</p>
+            
+            
+            </div></div>
+        
+        <div id="free" class="modalDialog"> <div class="modal-box">
+        
+            <a href="#close" class="close"><i class="ion-close-circled"></i></a>
+           
+            <h2>His Free Time</h2><div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5WSnIKUmD94" frameborder="0" allowfullscreen></iframe>
+            </div>
+           
+            <p>W.P. enjoys spending his evenings and weekends with his girlfriend. They enjoy trying out new restaurants downtown and attend Raptors games frequently. Kensington Market and the Eaton Centre are also favourite choices for the couple, who take the 501 streetcar/bus back and forth because it conveniently connects to the 44 Kipling South, 188 Kipling South Rocket, 76A Royal York South, and 110C Islington South buses.</p>
+            
+            
+            </div></div>
+        
+        <div id="job" class="modalDialog"> <div class="modal-box">
+        
+            <a href="#close" class="close"><i class="ion-close-circled"></i></a>
+           
+            <h2>His Job</h2><img class="work" src="css/work.png">
+           
+            <p>W.P. works at Cineplex Cinemas Queensway, a large movie theatre that attracts hundreds of customers on weekdays and thousands on weekends. He is a seasoned employee who works the dual roles of a trainer and supervisor. Over the years, W.P. has created a great name for himself among management and frontline staff alike. He is cross-trained at almost every position in the building and is always willing to jump into assist others and share his knowledge.</p>
+            
+            
+            </div></div>
+        
+        <div id="home" class="modalDialog"> <div class="modal-box">
+        
+            <a href="#close" class="close"><i class="ion-close-circled"></i></a>
+           
+            <h2>His Home Life</h2><img class="home" src="css/home.png">
+           
+            <p>W.P. lives near Bloor West Village and has the luxury of living right by a bus stop. He usually takes the 79A to Runnymede Station and takes the westbound subway to Islington Station for work or Kipling Station for classes at Humber Lakeshore Campus. At home, W.P. likes to watch sports or binge watch new shows on Netflix. He also stays over frequently at his girlfriend’s place near the Lakeshore Campus.</p>
+            
+            
+            </div></div>
+        
+        <div id="credit" class="modalDialog"> <div class="modal-box">
+        
+            <a href="#close" class="close"><i class="ion-close-circled"></i></a>
+           
+            <h2>Credits</h2>
+           
+            <p> Created and designed by Jessica Martin.
+                <br>Thank you to W.P for taking the time to be interviewed. <br>Video Credit to : Tourism Toronto Published on Oct 3, 2016</p>
+            
+            
+            </div></div>
       
-      </div>
       
       
-      <div class="arc">
-    <div class="arc-cube"></div>
-       </div>
-       
-    <div class="red1">
-    <img src="Red.png">
-        </div>
-       
-    <div class="orange1">
-    <img src="Orange.png">
-       </div>
-       
-       <div class="yellow1">
-    <img src="Yellow.png">
-       </div>
-       
-       <div class="green1">
-    <img src="Green.png">
-        </div>
-       
-       
-       <div class="blue1">
-    <img src="Blue.png">
-           </div>
-         
-       
-      </div>
-    
-  </body>
+</div>
   
+    <script src="js/index.js"></script>
+
+</body>
 </html>
-
