@@ -39,11 +39,10 @@ body {
 .title {
     color: aliceblue;
     font-size: 400%;
-    position:relative;
+    position:absolute;
     top: 40%;
-    width: 35%;
+    right: 15%;
     font-family: 'Architects Daughter', cursive;
-    margin: 0 auto;
 }
 
 .caption {
